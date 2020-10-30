@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@700&display=swap');
+:root {
+    --primary: #F9FCFB;
+    --secondary: #1F9398;
+    --accent: #2D2727;
+    --roboto: 'Roboto', sans-serif;
+    --lato: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--lato);
+    max-width: 1366px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 66px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    body {
+        font-size: 16px;
+    }
+    header {
+        height: 600px;
+    }
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: var(--primary);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+        z-index: 2;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+    nav ul li {
+        margin-right: 25px;
+    }
+    .active {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+    nav ul li a {
+        display: inline-block;
+        color: var(--secondary);
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 18px;
+    }
+    nav ul li a:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+    nav ul:last-child li:last-child {
+        margin-right: 0;
+    }
+    .brand img {
+        width: 76px;
+        height: 91px;
+        margin: 25px 25px 0 0;
+    }
+    .brand-name {
+        font-size: 36px;
+    }
+    .menu,
+    .close {
+        display: none;
+    }
+    .about {
+        padding-left: 25px;
+    }
+    .col-l-1 {
+        flex: 8.33%;
+        flex-grow: unset;
+    }
+    .col-l-2 {
+        flex: 16.66%;
+        flex-grow: unset;
+    }
+    .col-l-3 {
+        flex: 25%;
+        flex-grow: unset;
+    }
+    .col-l-4 {
+        flex: 33.33%;
+        flex-grow: unset;
+    }
+    .col-l-5 {
+        flex: 41.66%;
+        flex-grow: unset;
+    }
+    .col-l-6 {
+        flex: 50%;
+        flex-grow: unset;
+    }
+    .col-l-7 {
+        flex: 58.33%;
+        flex-grow: unset;
+    }
+    .col-l-8 {
+        flex: 66.66%;
+        flex-grow: unset;
+    }
+    .col-l-9 {
+        flex: 75%;
+        flex-grow: unset;
+    }
+    .col-l-10 {
+        flex: 83.33%;
+        flex-grow: unset;
+    }
+    .col-l-11 {
+        flex: 91.66%;
+        flex-grow: unset;
+    }
+    .col-l-12 {
+        flex: 100%;
+        flex-grow: unset;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    body {
+        font-size: 18px;
+    }
+    header {
+        height: 500px;
+    }
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: var(--primary);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+        margin-bottom: 50px;
+        z-index: 2;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+    nav ul li {
+        margin-right: 25px;
+    }
+    .active a {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+    nav ul li a {
+        display: inline-block;
+        color: var(--secondary);
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 18px;
+    }
+    nav ul li a:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+    nav ul:last-child li:last-child {
+        margin-right: 0;
+    }
+    .brand img {
+        width: 76px;
+        height: 91px;
+        margin: 25px 25px 0 0;
+    }
+    .brand-name {
+        font-size: 36px;
+    }
+    .menu,
+    .close {
+        display: none;
+    }
+    .col-m-1 {
+        flex: 8.33%;
+        flex-grow: unset;
+    }
+    .col-m-2 {
+        flex: 16.66%;
+        flex-grow: unset;
+    }
+    .col-m-3 {
+        flex: 25%;
+        flex-grow: unset;
+    }
+    .col-m-4 {
+        flex: 33.33%;
+        flex-grow: unset;
+    }
+    .col-m-5 {
+        flex: 41.66%;
+        flex-grow: unset;
+    }
+    .col-m-6 {
+        flex: 50%;
+        flex-grow: unset;
+    }
+    .col-m-7 {
+        flex: 58.33%;
+        flex-grow: unset;
+    }
+    .col-m-8 {
+        flex: 66.66%;
+        flex-grow: unset;
+    }
+    .col-m-9 {
+        flex: 75%;
+        flex-grow: unset;
+    }
+    .col-m-10 {
+        flex: 83.33%;
+        flex-grow: unset;
+    }
+    .col-m-11 {
+        flex: 91.66%;
+        flex-grow: unset;
+    }
+    .col-m-12 {
+        flex: 100%;
+        flex-grow: unset;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    body {
+        font-size: 14px;
+    }
+    header {
+        height: 450px;
+    }
+    nav {
+        display: none;
+    }
+    .brand img {
+        width: 50px;
+        height: 60px;
+        margin: 25px 25px 0 0;
+    }
+    .brand-name {
+        font-size: 24px;
+    }
+    .menu,
+    .close {
+        display: inline-block;
+    }
+    .menu {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: var(--primary);
+        margin-top: 7px;
+        padding: 5px 8px;
+        background-color: rgba(31, 147, 152, 0.50);
+    }
+    .menu i {
+        font-size: 28px;
+    }
+    nav {
+        display: none;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: var(--secondary);
+    }
+    .active a {
+        background-color: var(--primary);
+        color: var(--secondary);
+    }
+    .close i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 28px;
+        color: var(--primary);
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        color: var(--primary);
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    nav ul li a:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+    .about {
+        padding-top: 25px;
+    }
+    #contact+img {
+        display: none;
+    }
+    .col-s-1 {
+        flex: 8.33%;
+        flex-grow: unset;
+    }
+    .col-s-2 {
+        flex: 16.66%;
+        flex-grow: unset;
+    }
+    .col-s-3 {
+        flex: 25%;
+        flex-grow: unset;
+    }
+    .col-s-4 {
+        flex: 33.33%;
+        flex-grow: unset;
+    }
+    .col-s-5 {
+        flex: 41.66%;
+        flex-grow: unset;
+    }
+    .col-s-6 {
+        flex: 50%;
+        flex-grow: unset;
+    }
+    .col-s-7 {
+        flex: 58.33%;
+        flex-grow: unset;
+    }
+    .col-s-8 {
+        flex: 66.66%;
+        flex-grow: unset;
+    }
+    .col-s-9 {
+        flex: 75%;
+        flex-grow: unset;
+    }
+    .col-s-10 {
+        flex: 83.33%;
+        flex-grow: unset;
+    }
+    .col-s-11 {
+        flex: 91.66%;
+        flex-grow: unset;
+    }
+    .col-s-12 {
+        flex: 100%;
+        flex-grow: unset;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    body {
+        font-size: 14px;
+    }
+    .menu,
+    .close {
+        display: inline-block;
+    }
+    .menu {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: var(--primary);
+        margin-top: 7px;
+        padding: 5px 8px;
+        background-color: rgba(31, 147, 152, 0.50);
+    }
+    .menu i {
+        font-size: 28px;
+    }
+    nav {
+        display: none;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: var(--secondary);
+    }
+    .active a {
+        background-color: var(--primary);
+        color: var(--secondary);
+    }
+    .close i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 28px;
+        color: var(--primary);
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        color: var(--primary);
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    nav ul li a:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+    .col-1 {
+        flex: 8.33%;
+        flex-grow: unset;
+    }
+    .col-2 {
+        flex: 16.66%;
+        flex-grow: unset;
+    }
+    .col-3 {
+        flex: 25%;
+        flex-grow: unset;
+    }
+    .col-4 {
+        flex: 33.33%;
+        flex-grow: unset;
+    }
+    .col-5 {
+        flex: 41.66%;
+        flex-grow: unset;
+    }
+    .col-6 {
+        flex: 50%;
+        flex-grow: unset;
+    }
+    .col-7 {
+        flex: 58.33%;
+        flex-grow: unset;
+    }
+    .col-8 {
+        flex: 66.66%;
+        flex-grow: unset;
+    }
+    .col-9 {
+        flex: 75%;
+        flex-grow: unset;
+    }
+    .col-10 {
+        flex: 83.33%;
+        flex-grow: unset;
+    }
+    .col-11 {
+        flex: 91.66%;
+        flex-grow: unset;
+    }
+    .col-12 {
+        flex: 100%;
+        flex-grow: unset;
+    }
+}
+
+header {
+    background: rgba(31, 147, 152, 0.20) url('../images/banner.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section {
+    margin-top: 50px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.brand {
+    position: relative;
+}
+
+.brand-name {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--roboto);
+    color: var(--secondary);
+    padding-top: 15px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: var(--roboto);
+}
+
+.cta {
+    background-color: var(--secondary);
+    color: var(--primary);
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.cta:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+.cta:active {
+    box-shadow: none;
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--roboto);
+    margin: 25px 0 35px 0;
+}
+
+.hospital-image {
+    width: 100%;
+    height: auto;
+}
+
+.about {
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: var(--roboto);
+    margin: 15px 0;
+}
+
+.features {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.diagnosis {
+    text-align: center;
+}
+
+.diagnosis h3 {
+    text-align: center;
+}
+
+.diagnosis img {
+    width: 78px;
+    height: 78px;
+}
+
+.our-team {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding-top: 10px;
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card:hover span {
+    opacity: 1;
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card span {
+    display: inline-block;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 50px;
+    background-image: linear-gradient(to top, var(--secondary), var(--primary));
+    color: var(--accent);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.card+p {
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contact-us h3 {
+    text-align: center;
+}
+
+#contact {
+    list-style-type: none;
+}
+
+#contact li {
+    margin-top: 25px;
+}
+
+#contact li span:first-child {
+    margin-right: 15px;
+}
+
+#contact+img {
+    margin-top: 25px;
+    width: 95%;
+    height: auto;
+    border: 2px solid var(--secondary);
+}
+
+#appointment {
+    border: 2px solid var(--secondary);
+}
+
+#appointment form {
+    padding: 15px 30px;
+}
+
+.input-field label,
+.input-field input,
+.input-field span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    padding: 15px;
+    transition: all 0.5s;
+}
+
+input:focus+label {
+    top: -10px;
+    padding: 0;
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--secondary);
+    font-size: 16px;
+    font-family: var(--lato);
+}
+
+.error {
+    color: red;
+}
+
+footer {
+    background-color: var(--secondary);
+    margin-top: 25px;
+    padding: 15px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.p-1 {
+    padding: 10px;
+}
